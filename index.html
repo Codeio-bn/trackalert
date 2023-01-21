@@ -1,83 +1,23 @@
 <!DOCTYPE html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TrackAlert</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TrackAlert</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+  	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 
 <body>
-  <div class="container">
-    <div class="mt-5"></div>
+	<div class="container">
+		<div class="mt-5"></div>
 
-    <h2>TrackAlert</h2>
+		<h2>TrackAlert</h2>
 
-    <div class="buttons">
-      <button class="btn btn-primary" onclick="triggerDisplay('blue', 1)">Blue</button>
-      <button class="btn btn-warning" onclick="triggerDisplay('yellow', 1)">Yellow</button>
-      <button class="btn btn-danger" onclick="triggerDisplay('red', 1)">Red</button>
-      <br><br>
-      <button class="btn btn-dark" onclick="triggerDisplay('blank', 1)">Blank</button>
-    </div>
-    <br><br><br>
-    <div class="buttons">
-      <button class="btn btn-primary" onclick="triggerDisplay('blue', 2)">Blue</button>
-      <button class="btn btn-warning" onclick="triggerDisplay('yellow', 2)">Yellow</button>
-      <button class="btn btn-danger" onclick="triggerDisplay('red', 2)">Red</button>
-      <br><br>
-      <button class="btn btn-dark" onclick="triggerDisplay('blank', 2)">Blank</button>
-    </div>
+		<div id="displays"></div>
+	</div>
 
-    <br><br><br>
-
-    <div class="all">
-      <button class="btn btn-dark" onclick="triggerDisplay('blank')">All Off</button>
-    </div>
-
-  </div>
-  <script>
-    var ips = [
-      '',
-      'http://192.168.2.30',
-      'http://192.168.2.32'
-    ];
-
-    function triggerDisplay(color, id)
-    {
-      id = id || 0; 
-
-      if (id === 0) {
-        ips.slice(1).forEach(element => {
-          sendRequest('blank', ips.indexOf(element));
-        });
-      }
-
-      switch (color) 
-      {
-        case 'blue':
-          sendRequest('blue', id)
-          break;
-        case 'yellow':
-          sendRequest('yellow', id)
-          break;
-        case 'red':
-          sendRequest('red', id)
-          break;
-        case 'blank':
-        default:
-          sendRequest('blank', id)
-          break;
-      }
-    }
-
-    function sendRequest(display, id)
-    {
-      var xhr = new XMLHttpRequest();
-      xhr.open("GET", ips[id] + "/" + display, true);
-      xhr.send();
-    }
-  </script>
+	<script src="./js/DisplayManager.js"></script>
+	<script src="./js/displays.js"></script>
 </body>
-
 </html>
