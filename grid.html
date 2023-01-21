@@ -16,15 +16,21 @@
 <body>
 	<div class="container">
 		<h1>TrackAlert Grid</h1>
-		<div class="drag-container">
-			<div class="draggable"></div>
-			<div class="draggable"></div>
-			<div class="draggable"></div>
-		</div>
+		<div id="drag-container"></div>
 	</div>
 
+	<script src="./js/DisplayManager.js"></script>
 	<script src="./js/draggable.min.js"></script>
 	<script src="./js/grid.js"></script>
+	<script>
+		DisplayManager.getDisplays().forEach(ip => {
+			arrPos = DisplayManager.getDisplays().indexOf(ip);
+
+			$('#drag-container').append(
+				`<div class="draggable"></div>`
+			);
+		});
+	</script>
 </body>
 
 </html>
