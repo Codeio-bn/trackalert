@@ -9,6 +9,11 @@ class DisplayManager {
     }
 
     static triggerDisplay(color, ipPos) {
+        if (ipPos === 'all') {
+            this.#toggleAll(color, ipPos);
+            return;
+        }
+
         switch (color) {
             case 'blue':
                 this.#sendRequest('blue', ipPos)
@@ -31,5 +36,11 @@ class DisplayManager {
 //        var xhr = new XMLHttpRequest();
 //        xhr.open("GET", this.#ips + "/" + display, true);
 //        xhr.send();
+    }
+
+    static #toggleAll(color, pos) {
+        this.#ips.forEach(ip => {
+            this.#sendRequest(color, this.#ips.indexOf(ip));
+        });
     }
 }
