@@ -15,6 +15,9 @@ class DisplayManager {
         }
 
         switch (color) {
+        	case 'green':
+				this.#sendRequest('green', ipPos)
+				break;
             case 'blue':
                 this.#sendRequest('blue', ipPos)
                 break;
