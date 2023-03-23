@@ -127,7 +127,7 @@
 
 #displayButtons {
 	position: relative;
-	top: 84vh;
+	top: 80.5vh;
 }
 
 #displayButtons h4 {
@@ -179,7 +179,7 @@
 	float: right;
 	margin-right: 1em;
 	position: relative;
-	top: 68vh;
+	top: 60vh;
 }
 
 .modal {
@@ -199,34 +199,34 @@
 	background-color: #1C1D21;
 	margin: 15% auto; /* 15% from the top and centered */
 	padding: 20px;
-	border: 1px solid #888;
 	width: 80%; /* Could be more or less, depending on screen size */
+	border-radius: 8px;
 }
 
 
 .ip-input-container {
 	display: inline-block;
 	font-size: 0;
-	border: 1px solid #ccc;
-	padding: 6px 0
+	border-bottom: 1px solid #ccc;
+	padding: 6px 0;
+	margin: 0.5em;
 }
 
 .ip-input-container .ip-input-item {
 	border: none;
 	outline: 0;
 	margin: 0;
-	width: 60px;
+	width: 3em;
 	text-align: center;
 	vertical-align: bottom;
-	font-size: 13px
 }
 
 .ip-input-container .ip-input-dot {
 	display: inline-block;
-	width: 2px;
-	height: 2px;
+	width: 3px;
+	height: 3px;
 	margin-bottom: 2px;
-	background-color: #333;
+	background-color: #fff;
 	border-radius: 50%;
 	vertical-align: bottom
 }
