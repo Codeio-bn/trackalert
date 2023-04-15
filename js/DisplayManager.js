@@ -35,10 +35,10 @@ class DisplayManager {
     }
 
     static #sendRequest(display, ipPos) {
-    	console.log(display, this.#ips[ipPos]);
-//        var xhr = new XMLHttpRequest();
-//        xhr.open("GET", this.#ips + "/" + display, true);
-//        xhr.send();
+    	// console.log(display, this.#ips[ipPos]);
+       var xhr = new XMLHttpRequest();
+       xhr.open("GET", this.#ips[ipPos] + "/" + display, true);
+       xhr.send();
     }
 
     static #toggleAll(color, pos) {
