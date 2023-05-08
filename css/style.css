@@ -120,6 +120,7 @@
 	position: relative;
 	height: 2.5vh;
 	left: -1.8vw;
+	background-color: transparent;
 }
 
 .track img {
@@ -149,7 +150,9 @@
 
 #displayButtons {
 	position: relative;
-	top: 80.5vh;
+	top: 82.5vh;
+	left: 16%;
+    width: 70%;
 }
 
 #displayButtons h4 {
