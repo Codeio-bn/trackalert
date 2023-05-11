@@ -133,7 +133,7 @@
 }
 
 #displays .active {
-	border: 5px solid #fff;
+	background-color: #454850;
 }
 
 .display {
