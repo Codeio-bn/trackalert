@@ -108,6 +108,20 @@
 	transform: translate(50%, -50%);
 }
 
+.demo-right {
+	text-align: right;
+	position: absolute;
+	bottom: 2vh;
+	right: 3%;
+}
+.demo-right h4 {
+	font-size: 2em;
+	margin-bottom: 0.1em;
+}
+.demo-right a {
+	color: #3d7bf9;
+}
+
 .container {
 	margin-right: auto;
 	margin-left:  auto;
