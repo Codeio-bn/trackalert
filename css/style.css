@@ -155,8 +155,24 @@
     width: 70%;
 }
 
+@keyframes append-animate {
+	from {
+		transform: translateY(100%);
+	}
+	to {
+		transform: translateY(0%);
+	}
+}
+
+#displayButtons .buttons {
+	transform-origin: 50% 0;
+	animation: append-animate .3s linear;
+}
+
 #displayButtons h4 {
 	margin-bottom: 1em;
+	transform-origin: 50% 0;
+	animation: append-animate .3s linear;
 }
 
 #overlay {

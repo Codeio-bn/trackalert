@@ -1,7 +1,6 @@
 class DisplayManager {
     static #ips = [
     	'http://192.168.2.30',
-    	'http://192.168.2.32',
 	];
 
     static getDisplays() {
