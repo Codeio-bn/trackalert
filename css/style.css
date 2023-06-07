@@ -6,6 +6,9 @@
 	font-family: "Roboto Thin", sans-serif;
 }
 
+body {
+	overflow: hidden;
+}
 
 .ml-1 {
 	left: 0.25em;
@@ -89,6 +92,12 @@
 }
 .btn-red:hover {
 	background: #df1e1e;
+}
+.btn-all {
+	background-image: linear-gradient(to right, #ED4646,orange,#FFE553,#54D385, #6195FF);
+}
+.btn-all:hover {
+	background-image: linear-gradient(to right, #df1e1e,orange,#dcc424,#1ca75d, #3d7bf9);
 }
 
 .left {

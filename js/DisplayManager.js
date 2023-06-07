@@ -1,6 +1,7 @@
 class DisplayManager {
     static #ips = [
-    	'http://192.168.2.30',
+    	'http://192.168.0.134',
+    	'http://192.168.0.178',
 	];
 
     static getDisplays() {
@@ -10,6 +11,11 @@ class DisplayManager {
     static triggerDisplay(color, ipPos) {
         if (ipPos === 'all') {
             this.#toggleAll(color, ipPos);
+            return;
+        }
+
+        if (color === 'all' && ipPos === 'all') {
+            this.#toggleLastLap(color, ipPos);
             return;
         }
 
@@ -69,6 +75,12 @@ class DisplayManager {
     //    var xhr = new XMLHttpRequest();
     //    xhr.open("GET", this.#ips[ipPos] + "/" + display, true);
     //    xhr.send();
+    }
+
+    static #toggleLastLap(color, pos) {
+        this.#ips.forEach(ip => {
+            this.#sendRequest(color, this.#ips.indexOf(ip));
+        });
     }
 
     static #toggleAll(color, pos) {

@@ -1,3 +1,7 @@
 #display0 {
-    transform: translate(650%, 130%);
+    transform: translate(25%, 190%);
+}
+
+#display1 {
+    transform: translate(530%, 10%);
 }
