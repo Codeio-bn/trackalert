@@ -264,12 +264,19 @@ body {
 	margin-left: 50px;
 }
 
-
-#addConnectionModal {
-	float: right;
+.settings-bottom {
+	display: flex;
+	justify-content: space-between;
 	margin-right: 1em;
 	position: relative;
 	top: 60vh;
+}
+.version {
+	position: relative;
+}
+
+#addConnectionModal {
+	float: right;
 }
 
 .modal {
