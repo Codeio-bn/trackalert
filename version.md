@@ -1,3 +1,8 @@
+#1.3.0 - 12-06-2023
+Minor release
+- Changed settings layout
+- Changed all panels button layout
+
 #1.2.0 - 12-06-2023
 Minor release
 - Added final lap button

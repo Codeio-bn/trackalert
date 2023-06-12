@@ -36,6 +36,10 @@ body {
 	top: 8rem;
 }
 
+.pos-rel {
+	position: relative;
+}
+
 .column {
 	display: flex;
 	flex-direction: column;
