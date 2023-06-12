@@ -9,13 +9,13 @@ class DisplayManager {
     }
 
     static triggerDisplay(color, ipPos) {
-        if (ipPos === 'all') {
-            this.#toggleAll(color, ipPos);
+        if (color === 'all' && ipPos === 'all') {
+            this.#toggleLastLap();
             return;
         }
 
-        if (color === 'all' && ipPos === 'all') {
-            this.#toggleLastLap(color, ipPos);
+        if (ipPos === 'all') {
+            this.#toggleAll(color, ipPos);
             return;
         }
 
@@ -70,16 +70,14 @@ class DisplayManager {
                 $('#display' + ipPos).css('border', '5px solid ' + buttonColor)
             }
         })
-
-    	console.log(display, this.#ips[ipPos]);
-    //    var xhr = new XMLHttpRequest();
-    //    xhr.open("GET", this.#ips[ipPos] + "/" + display, true);
-    //    xhr.send();
     }
 
-    static #toggleLastLap(color, pos) {
+    static #toggleLastLap() {
         this.#ips.forEach(ip => {
-            this.#sendRequest(color, this.#ips.indexOf(ip));
+            this.#sendRequest('green', this.#ips.indexOf(ip))
+            this.#sendRequest('blue', this.#ips.indexOf(ip))
+            this.#sendRequest('yellow', this.#ips.indexOf(ip))
+            this.#sendRequest('red', this.#ips.indexOf(ip))
         });
     }
 

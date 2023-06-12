@@ -38,9 +38,8 @@ function showDisplayAllButtons()
 				<button class="btn btn-green" onclick="DisplayManager.triggerDisplay('green', 'all')">Green</button>
 				<button class="btn btn-yellow" onclick="DisplayManager.triggerDisplay('yellow', 'all')">Yellow</button>
 				<button class="btn btn-red" onclick="DisplayManager.triggerDisplay('red', 'all')">Red</button>
+				<button class="btn btn-all" onclick="DisplayManager.triggerDisplay('all', 'all')">Last lap</button>
 			<div>
 		<div>`
 	);
-
-	//<button class="btn btn-all" onclick="DisplayManager.triggerDisplay('all', 'all')">Last lap</button>
 }

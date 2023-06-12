@@ -1,7 +1,19 @@
+/* Rotate track 90 degrees to match sitting position */
+.track img {
+    transform: rotate(-90deg);
+    height: 50vh;
+    z-index: -1;
+    position: relative;
+}
+
+.displays {
+    z-index: 1;
+}
+
 #display0 {
-    transform: translate(25%, 190%);
+    transform: translate(320%, 642%)
 }
 
 #display1 {
-    transform: translate(530%, 10%);
+    transform: translate(265%, 175%)
 }

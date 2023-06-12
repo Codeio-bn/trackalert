@@ -112,7 +112,7 @@ body {
 
 .center {
 	position: absolute;
-	top: 50%;
+	top: 45%;
 	right: 45%;
 	transform: translate(50%, -50%);
 }
@@ -141,7 +141,7 @@ body {
 
 .trackalert-logo {
 	position: relative;
-	height: 2.5vh;
+	height: 2.4vh;
 	left: -1.8vw;
 	background-color: transparent;
 }
@@ -173,9 +173,11 @@ body {
 
 #displayButtons {
 	position: relative;
+	z-index: 99;
 	top: 82.5vh;
 	left: 16%;
     width: 70%;
+	background-color: transparent;
 }
 
 @keyframes append-animate {
@@ -190,12 +192,14 @@ body {
 #displayButtons .buttons {
 	transform-origin: 50% 0;
 	animation: append-animate .3s linear;
+	background-color: transparent;
 }
 
 #displayButtons h4 {
 	margin-bottom: 1em;
 	transform-origin: 50% 0;
 	animation: append-animate .3s linear;
+	background-color: transparent;
 }
 
 #overlay {
