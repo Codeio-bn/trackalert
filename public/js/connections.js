@@ -2,7 +2,7 @@ $(document).ready(() => {
 	displayConnections();
 	openAddConnectionModal();
 
-	var ipInput = $('#ip').ipInput();
+	// var ipInput = $('#ip').ipInput();
 });
 
 function displayConnections()

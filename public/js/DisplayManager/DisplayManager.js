@@ -43,7 +43,7 @@ class DisplayManager {
         console.log(display);
         $.ajax({
             // Url for testing purposes.
-            // url: 'http://localhost/api-test/' + display + '.php',
+            // url: 'http://localhost:8081/' + display,
             url: this.#ips[ipPos] + "/" + display,
             type: "application/json",
             method: 'get',
